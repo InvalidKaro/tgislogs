@@ -18,7 +18,7 @@ class invite_tracker(commands.Cog):
     """
     def __init__(self, bot):
         self.bot = bot
-        self.logs_channel = self.bot.get_channel(1003011293508272198)
+        self.logs_channel = self.bot.get_channel(1003015755333369968)
         self.version = "1.0.0"
 
         self.invites = {}
@@ -40,7 +40,7 @@ class invite_tracker(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        logs = self.bot.get_channel(1003011293508272198)
+        logs = self.bot.get_channel(1003015755333369968)
         eme = Embed(description="Just joined the server", color=0x03d692, title=" ")
         eme.set_author(name=str(member), icon_url=member.avatar_url)
         eme.set_footer(text="ID: " + str(member.id))
@@ -60,7 +60,7 @@ class invite_tracker(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_remove(self, member):
-        logs = self.bot.get_channel(1003011293508272198)
+        logs = self.bot.get_channel(1003015755333369968)
         eme = Embed(description="Just left the server", color=0xff0000, title=" ")
         eme.set_author(name=str(member), icon_url=member.avatar_url)
         eme.set_footer(text="ID: " + str(member.id))
